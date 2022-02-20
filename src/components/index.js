@@ -1,6 +1,6 @@
 // import Vue from 'vue';
-import MuButton from './button';
-import MuInput from './input';
+import MuButton from './common/button';
+import MuInput from './common/input';
 
 const MyUI = {};
 // COMPONENTS = {

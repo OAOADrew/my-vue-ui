@@ -1,0 +1,39 @@
+@import '@/style/variable.scss';
+
+// 类型
+// 不同类型颜色
+$btn-default-color: #fff;
+$btn-primary-color: $primary-color;
+$btn-success-color: $success-color;
+$btn-warning-color: $warning-color;
+
+// 鼠标悬浮亮色
+$btn-default-lighting-color: #e8f4ff;
+$btn-primary-lighting-color: #33ADFF;
+$btn-success-lighting-color: #56CC56;
+$btn-warning-lighting-color: #E89B29;
+
+// 鼠标点击暗色
+$btn-default-dark-color: #e8f4ff;
+$btn-primary-dark-color: #008FEE;
+$btn-success-dark-color: #38B738;
+$btn-warning-dark-color: #C78017;
+
+// 尺寸
+// 字体大小
+$btn-normal-font-size: $base-font-size;
+$btn-large-font-size: 16px;
+$btn-small-font-size: 12px;
+$btn-mini-font-size: 12px;
+
+// 上下内边距
+$btn-normal-padding-t-to-b: 7px;
+$btn-large-padding-t-to-b: 8px;
+$btn-small-padding-t-to-b: 6px;
+$btn-mini-padding-t-to-b: 5px;
+
+// 左右内边距
+$btn-normal-padding-l-to-r: 15px;
+$btn-large-padding-l-to-r: 16px;
+$btn-small-padding-l-to-r: 12px;
+$btn-mini-padding-l-to-r: 10px;

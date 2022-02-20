@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Layout from '@/views/layout'
+import Layout from '@/views/layout';
 
 Vue.use(Router);
 
@@ -11,17 +11,12 @@ const router = new Router({
     {
       path: '',
       component: Layout,
-      redirect: '/javascript',
+      redirect: '/button',
       children: [
         {
-          name: 'javascript',
-          path: 'javascript',
-          component: () => import('@/views/javascript/index')
-        },
-        {
-          name: 'css',
-          path: 'css',
-          component: () => import('@/views/css/index')
+          name: 'button',
+          path: 'button',
+          component: () => import('@/components/common/button')
         }
       ]
     }
