@@ -14,14 +14,14 @@ export default {
         {id: 1, name: 'js', path: '/javascript'},
         {id: 2, name: 'css', path: '/css'}
       ]
-    }
+    };
   },
   methods: {
     handleRouter(val) {
       const currentPath = window.location.pathname;
-      if(currentPath === val.path) return;      
-      this.$router.push(val.path)
+      if(currentPath === val.path) return;
+      this.$router.push(val.path);
     }
   }
-}
+};
 </script>
