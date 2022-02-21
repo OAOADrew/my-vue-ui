@@ -1,18 +1,24 @@
 <template>
   <div class="layout_aside">
     <div v-for="router in routerList" :key="router.id" class="layout_aside_item">
-      <div @click="handleRouter(router)">{{ router.name }}</div>
+      <div @click="handleRouter(router)">
+        {{ router.value }}
+        <span>
+          {{ router.name }}
+        </span>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'LayoutAside',
   data() {
     return {
       routerList: [
-        {id: 1, name: 'js', path: '/javascript'},
-        {id: 2, name: 'css', path: '/css'}
+        {id: 1, name: '按钮', value: 'Button', path: '/button'},
+        {id: 2, name: '单行文本', value: 'Input', path: '/input'}
       ]
     };
   },
@@ -25,3 +31,7 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+@import './../style.scss';
+</style>

@@ -16,7 +16,12 @@ const router = new Router({
         {
           name: 'button',
           path: 'button',
-          component: () => import('@/components/common/button')
+          component: () => import('@/views/demo/button')
+        },
+        {
+          name: 'input',
+          path: 'input',
+          component: () => import('@/views/demo/input')
         }
       ]
     }
