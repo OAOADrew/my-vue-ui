@@ -1,0 +1,94 @@
+@import './variable';
+
+.mu_button {
+  border-radius: 3px;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// 类型样式处理
+@mixin mbtn_common_style($btn-color, $btn-lighting-color, $btn-dark-color, $btn-disabled-color) {
+  background-color: $btn-color;
+  border: 1px solid $btn-color;
+  color: #eee;
+  &:hover, &:focus {
+    background-color: $btn-lighting-color;
+  }
+  &:active {
+    background-color: $btn-dark-color
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $btn-disabled-color;
+    border-color: $btn-disabled-color;
+  }
+}
+
+// 尺寸处理
+@mixin mbtn_common_size($btn-font-size, $btn-padding-t-to-b, $btn-padding-l-to-r) {
+  font-size: $btn-font-size;
+  padding: $btn-padding-t-to-b $btn-padding-l-to-r;
+}
+
+.mbtn_default {
+  @include mbtn_common_style($btn-default-color, $btn-default-lighting-color, $btn-default-dark-color, #fff);
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  &:hover, &:focus {
+    color: #1890ff;
+    border-color: #a3d3ff;
+  }
+  &:active {
+    border-color: #1890ff;
+  }
+  &:disabled {
+    color: #bfc0c5;
+    border-color: #eaecf0;
+  }
+}
+
+.mbtn_text {
+  color: $btn-primary-color;
+  background-color: #fff;
+  border: none;
+  &:hover, &:focus {
+    color: $btn-primary-lighting-color;
+  }
+  &:active {
+    color: $btn-primary-dark-color;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: #bfc0c5;
+  }
+}
+
+.mbtn_primary {
+  @include mbtn_common_style($btn-primary-color, $btn-primary-lighting-color, $btn-primary-dark-color, #90c1e9)
+}
+
+.mbtn_success {
+  @include mbtn_common_style($btn-success-color, $btn-success-lighting-color, $btn-success-dark-color, #80df95)
+}
+
+.mbtn_warning {
+  @include mbtn_common_style($btn-warning-color, $btn-warning-lighting-color, $btn-warning-dark-color, #ecc87a)
+}
+
+.mbtn_size_normal {
+  @include mbtn_common_size($btn-normal-font-size, $btn-normal-padding-t-to-b, $btn-normal-padding-l-to-r)
+}
+
+.mbtn_size_large {
+  @include mbtn_common_size($btn-large-font-size, $btn-large-padding-t-to-b, $btn-large-padding-l-to-r)
+}
+
+.mbtn_size_small {
+  @include mbtn_common_size($btn-small-font-size, $btn-small-padding-t-to-b, $btn-small-padding-l-to-r)
+}
+
+.mbtn_size_mini {
+  @include mbtn_common_size($btn-mini-font-size, $btn-mini-padding-t-to-b, $btn-mini-padding-l-to-r)
+}
