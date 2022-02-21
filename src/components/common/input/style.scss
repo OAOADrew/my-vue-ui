@@ -1,0 +1,17 @@
+@import '@/style/variable.scss';
+
+.mu_input {
+  border: 1px solid #ddd;
+  height: 38px;
+  border-radius: 5px;
+  outline: 0;
+  padding: 0 8px;
+  color: #707070;
+  &:hover {
+    cursor: pointer;
+    border-color: #BBBBBB;
+  }
+  &:focus {
+    border-color: $primary-color;
+  }
+}
